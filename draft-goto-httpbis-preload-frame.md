@@ -146,7 +146,7 @@ The flow is as follows:
 ~~~
 {: #OverView title="OverView in HTTP/2 with TLS1.3"}
 
-After sending ServerHello of the TLS 1.3 handshake, the server sends a SETTINGS frame which is the server connection preface as TLS Application Data. Subsequently, the server identifies the domain from which the client wants to send an HTTP request from the SNI obtained during the handshake. The server can indicate preload in the PRELOAD frame for resources commonly used in that domain. The client parses the PRELOAD frame and fetches the resource if it does not have cache for that resource. The semantics are the same as those defined in Preload{{Preload}}. If the client does not support a PRELOAD frame, it is simply ignored.
+After sending ServerHello of the TLS 1.3 handshake, the server sends a SETTINGS frame which is the server connection preface as TLS Application Data. Subsequently, The server uses the SNI to identify the domain which the client wants to send an HTTP request. The server can indicate preload in the PRELOAD frame for resources commonly used in that domain. The client parses the PRELOAD frame and fetches the resource if it does not have cache for that resource. The semantics are the same as those defined in Preload{{Preload}}. If the client does not support a PRELOAD frame, it is simply ignored.
 
 # PRELOAD Frame Extension        {#preload-extension}
 Preload Frame Extension does not define a new format to convey preload information. It uses the already defined Link HTTP header. However, it is not an HTTP response carried in this frame, and it is not associated with an HTTP request to an authority. Therefore, the server MUST store only information about Preload{{Preload}} in this frame to avoid confusion in the implementation.
