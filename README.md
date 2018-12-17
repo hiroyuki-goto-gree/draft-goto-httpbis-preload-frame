@@ -11,8 +11,6 @@ This is the working area for individual Internet-Drafts.
 ## The PRELOAD Frame Extension (ja)
 
 * [Editor's Copy](https://hiroyuki-goto-gree.github.io/draft-goto-httpbis-preload-frame/#go.draft-goto-httpbis-preload-frame-ja.html)
-* [Individual Draft](https://tools.ietf.org/html/draft-goto-httpbis-preload-frame-ja)
-* [Compare Editor's Copy to Individual Draft](https://hiroyuki-goto-gree.github.io/draft-goto-httpbis-preload-frame/#go.draft-goto-httpbis-preload-frame-ja.diff)
 
 ## Building the Draft
 
