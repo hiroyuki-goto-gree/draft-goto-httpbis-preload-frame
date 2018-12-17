@@ -1,7 +1,3 @@
-# HTTPBIS Drafts
-
-This is the working area for individual Internet-Drafts.
-
 ## The PRELOAD Frame Extension
 
 * [Editor's Copy](https://hiroyuki-goto-gree.github.io/draft-goto-httpbis-preload-frame/#go.draft-goto-httpbis-preload-frame.html)
