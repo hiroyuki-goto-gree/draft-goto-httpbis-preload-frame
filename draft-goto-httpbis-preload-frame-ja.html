@@ -288,13 +288,13 @@ ul.toc li {
 <link href="#rfc.section.2.2" rel="Chapter" title="2.2 HTTP/2">
 <link href="#rfc.section.2.2.1" rel="Chapter" title="2.2.1 Frame Format">
 <link href="#rfc.section.2.3" rel="Chapter" title="2.3 HTTP/3">
-<link href="#rfc.section.3" rel="Chapter" title="3 Padding">
-<link href="#rfc.section.3.1" rel="Chapter" title="3.1 Error Code">
-<link href="#rfc.section.4" rel="Chapter" title="4 Security Considerations">
-<link href="#rfc.section.5" rel="Chapter" title="5 IANA Considerations">
-<link href="#rfc.references" rel="Chapter" title="6 References">
-<link href="#rfc.references.1" rel="Chapter" title="6.1 Normative References">
-<link href="#rfc.references.2" rel="Chapter" title="6.2 Informative References">
+<link href="#rfc.section.2.4" rel="Chapter" title="2.4 Padding">
+<link href="#rfc.section.2.5" rel="Chapter" title="2.5 Error Code">
+<link href="#rfc.section.3" rel="Chapter" title="3 Security Considerations">
+<link href="#rfc.section.4" rel="Chapter" title="4 IANA Considerations">
+<link href="#rfc.references" rel="Chapter" title="5 References">
+<link href="#rfc.references.1" rel="Chapter" title="5.1 Normative References">
+<link href="#rfc.references.2" rel="Chapter" title="5.2 Informative References">
 <link href="#rfc.acknowledgements" rel="Chapter">
 <link href="#rfc.authors" rel="Chapter">
 
@@ -365,19 +365,19 @@ ul.toc li {
 </li>
 </ul><li>2.3.   <a href="#rfc.section.2.3">HTTP/3</a>
 </li>
-</ul><li>3.   <a href="#rfc.section.3">Padding</a>
+<li>2.4.   <a href="#rfc.section.2.4">Padding</a>
 </li>
-<ul><li>3.1.   <a href="#rfc.section.3.1">Error Code</a>
+<li>2.5.   <a href="#rfc.section.2.5">Error Code</a>
 </li>
-</ul><li>4.   <a href="#rfc.section.4">Security Considerations</a>
+</ul><li>3.   <a href="#rfc.section.3">Security Considerations</a>
 </li>
-<li>5.   <a href="#rfc.section.5">IANA Considerations</a>
+<li>4.   <a href="#rfc.section.4">IANA Considerations</a>
 </li>
-<li>6.   <a href="#rfc.references">References</a>
+<li>5.   <a href="#rfc.references">References</a>
 </li>
-<ul><li>6.1.   <a href="#rfc.references.1">Normative References</a>
+<ul><li>5.1.   <a href="#rfc.references.1">Normative References</a>
 </li>
-<li>6.2.   <a href="#rfc.references.2">Informative References</a>
+<li>5.2.   <a href="#rfc.references.2">Informative References</a>
 </li>
 </ul><li><a href="#rfc.acknowledgements">Acknowledgements</a>
 </li>
@@ -471,24 +471,24 @@ Link: &lt;https://example.com/app/script.js&gt;; rel=preload; as=script
 </h2>
 <p id="rfc.section.2.3.p.1">HTTP/3&#12391;&#12418;PRELOAD&#12501;&#12524;&#12540;&#12512;(type=TBD)&#12399;&#20351;&#29992;&#12391;&#12365;&#12414;&#12377;&#12290;&#12501;&#12457;&#12540;&#12510;&#12483;&#12488;&#12399;<a href="#h2-frame" class="xref">Section 2.2.1</a>&#12391;&#35500;&#26126;&#12373;&#12428;&#12383;&#12418;&#12398;&#12392;&#21516;&#12376;&#12391;&#12377;&#12364;&#12289;&#12506;&#12452;&#12525;&#12540;&#12489;&#12398;Header Block&#12399;HPACK&#12391;&#12399;&#12394;&#12367;QPACK<a href="#QPACK" class="xref">[QPACK]</a>&#12434;&#20351;&#29992;&#12375;&#12414;&#12377;&#12289;&#12501;&#12524;&#12540;&#12512;&#12399;&#21516;&#27096;&#12395;&#21205;&#30340;&#12504;&#12483;&#12480;&#12486;&#12540;&#12502;&#12523;&#12398;&#26356;&#26032;&#12399;&#12375;&#12390;&#12399;&#12356;&#12369;&#12414;&#12379;&#12435;&#12290;</p>
 <p id="rfc.section.2.3.p.2">&#12371;&#12398;PRELOAD&#12501;&#12524;&#12540;&#12512;&#12399;&#21046;&#24481;&#12473;&#12488;&#12522;&#12540;&#12512;&#19978;&#12391;&#12469;&#12540;&#12496;&#12363;&#12425;&#12398;&#12415;&#36865;&#20449;&#12391;&#12365;&#12414;&#12377;&#12290;&#12371;&#12398;&#12501;&#12524;&#12540;&#12512;&#12434;&#21463;&#20449;&#12375;&#12383;&#12469;&#12540;&#12496;&#12420;&#12289;&#30064;&#12394;&#12427;&#12473;&#12488;&#12522;&#12540;&#12512;&#12391;&#12398;&#21463;&#20449;&#12399;&#12467;&#12493;&#12463;&#12471;&#12519;&#12531;&#12456;&#12521;&#12540;&#12392;&#12375;&#12390;&#25201;&#12431;&#12394;&#12369;&#12428;&#12400;&#12394;&#12426;&#12414;&#12379;&#12435;(MUST)&#12290;</p>
-<h1 id="rfc.section.3">
-<a href="#rfc.section.3">3.</a> <a href="#padding" id="padding">Padding</a>
-</h1>
-<p id="rfc.section.3.p.1">&#20351;&#29992;&#12373;&#12428;&#12427;SNI&#12395;&#20381;&#23384;&#12375;&#12390;PRELOAD&#12501;&#12524;&#12540;&#12512;&#12398;&#38263;&#12373;&#12364;&#22793;&#12431;&#12427;&#22580;&#21512;&#12399;&#12289;&#26368;&#21021;&#12398;&#12450;&#12503;&#12522;&#12465;&#12540;&#12471;&#12519;&#12531;&#12487;&#12540;&#12479;&#12434;&#35251;&#28204;&#12377;&#12427;&#12371;&#12392;&#12391;&#12507;&#12473;&#12488;&#21517;&#12434;&#25512;&#28204;&#21487;&#33021;&#12391;&#12377;&#12290;&#12371;&#12428;&#12399;&#12289;ENSI<a href="#TLS-ESNI" class="xref">[TLS-ESNI]</a>&#12391;SNI&#12434;&#26263;&#21495;&#21270;&#12375;&#12390;&#12356;&#12427;&#22580;&#21512;&#12289;&#32771;&#24942;&#12377;&#12409;&#12365;&#12391;&#12377;&#12290;</p>
-<p id="rfc.section.3.p.2">(TBD) Use padding</p>
-<h2 id="rfc.section.3.1">
-<a href="#rfc.section.3.1">3.1.</a> <a href="#error" id="error">Error Code</a>
+<h2 id="rfc.section.2.4">
+<a href="#rfc.section.2.4">2.4.</a> <a href="#padding" id="padding">Padding</a>
 </h2>
-<p id="rfc.section.3.1.p.1">(TBD)</p>
-<p id="rfc.section.3.1.p.2">Note: &#26032;&#12375;&#12356;&#12456;&#12521;&#12540;&#12467;&#12540;&#12489;&#12434;&#23450;&#32681;&#12377;&#12427;&#24517;&#35201;&#12399;&#12354;&#12426;&#12414;&#12377;&#12363;&#65311;</p>
+<p id="rfc.section.2.4.p.1">&#20351;&#29992;&#12373;&#12428;&#12427;SNI&#12395;&#20381;&#23384;&#12375;&#12390;PRELOAD&#12501;&#12524;&#12540;&#12512;&#12398;&#38263;&#12373;&#12364;&#22793;&#12431;&#12427;&#22580;&#21512;&#12399;&#12289;&#26368;&#21021;&#12398;&#12450;&#12503;&#12522;&#12465;&#12540;&#12471;&#12519;&#12531;&#12487;&#12540;&#12479;&#12434;&#35251;&#28204;&#12377;&#12427;&#12371;&#12392;&#12391;&#12507;&#12473;&#12488;&#21517;&#12434;&#25512;&#28204;&#21487;&#33021;&#12391;&#12377;&#12290;&#12371;&#12428;&#12399;&#12289;ENSI<a href="#TLS-ESNI" class="xref">[TLS-ESNI]</a>&#12391;SNI&#12434;&#26263;&#21495;&#21270;&#12375;&#12390;&#12356;&#12427;&#22580;&#21512;&#12289;&#32771;&#24942;&#12377;&#12409;&#12365;&#12391;&#12377;&#12290;</p>
+<p id="rfc.section.2.4.p.2">(TBD) Use padding</p>
+<h2 id="rfc.section.2.5">
+<a href="#rfc.section.2.5">2.5.</a> <a href="#error" id="error">Error Code</a>
+</h2>
+<p id="rfc.section.2.5.p.1">(TBD)</p>
+<p id="rfc.section.2.5.p.2">Note: &#26032;&#12375;&#12356;&#12456;&#12521;&#12540;&#12467;&#12540;&#12489;&#12434;&#23450;&#32681;&#12377;&#12427;&#24517;&#35201;&#12399;&#12354;&#12426;&#12414;&#12377;&#12363;&#65311;</p>
+<h1 id="rfc.section.3">
+<a href="#rfc.section.3">3.</a> <a href="#security" id="security">Security Considerations</a>
+</h1>
+<p id="rfc.section.3.p.1">&#12469;&#12540;&#12496;&#12399;&#22823;&#12365;&#12394;PRELOAD&#12501;&#12524;&#12540;&#12512;&#12434;&#36865;&#20449;&#12377;&#12427;&#12371;&#12392;&#12391;&#12289;&#12463;&#12521;&#12452;&#12450;&#12531;&#12488;&#12398;&#12522;&#12477;&#12540;&#12473;&#12434;&#28040;&#36027;&#12373;&#12379;&#12427;&#12371;&#12392;&#12364;&#20986;&#26469;&#12414;&#12377;&#12290;&#12381;&#12398;&#12383;&#12417;&#12289;&#12463;&#12521;&#12452;&#12450;&#12531;&#12488;&#12399;&#22823;&#12365;&#12377;&#12366;&#12427;PRELOAD&#12501;&#12524;&#12540;&#12512;&#12434;&#28961;&#35222;&#12377;&#12409;&#12365;&#12391;&#12377;&#12290;</p>
 <h1 id="rfc.section.4">
-<a href="#rfc.section.4">4.</a> <a href="#security" id="security">Security Considerations</a>
+<a href="#rfc.section.4">4.</a> <a href="#iana" id="iana">IANA Considerations</a>
 </h1>
-<p id="rfc.section.4.p.1">&#12469;&#12540;&#12496;&#12399;&#22823;&#12365;&#12394;PRELOAD&#12501;&#12524;&#12540;&#12512;&#12434;&#36865;&#20449;&#12377;&#12427;&#12371;&#12392;&#12391;&#12289;&#12463;&#12521;&#12452;&#12450;&#12531;&#12488;&#12398;&#12522;&#12477;&#12540;&#12473;&#12434;&#28040;&#36027;&#12373;&#12379;&#12427;&#12371;&#12392;&#12364;&#20986;&#26469;&#12414;&#12377;&#12290;&#12381;&#12398;&#12383;&#12417;&#12289;&#12463;&#12521;&#12452;&#12450;&#12531;&#12488;&#12399;&#22823;&#12365;&#12377;&#12366;&#12427;PRELOAD&#12501;&#12524;&#12540;&#12512;&#12434;&#28961;&#35222;&#12377;&#12409;&#12365;&#12391;&#12377;&#12290;</p>
-<h1 id="rfc.section.5">
-<a href="#rfc.section.5">5.</a> <a href="#iana" id="iana">IANA Considerations</a>
-</h1>
-<p id="rfc.section.5.p.1">This specification adds an entry to the &#8220;HTTP/2 Frame Type&#8221; registry.</p>
+<p id="rfc.section.4.p.1">This specification adds an entry to the &#8220;HTTP/2 Frame Type&#8221; registry.</p>
 <p></p>
 
 <ul>
@@ -497,9 +497,9 @@ Link: &lt;https://example.com/app/script.js&gt;; rel=preload; as=script
 <li>Specification: This draft</li>
 </ul>
 <h1 id="rfc.references">
-<a href="#rfc.references">6.</a> References</h1>
+<a href="#rfc.references">5.</a> References</h1>
 <h2 id="rfc.references.1">
-<a href="#rfc.references.1">6.1.</a> Normative References</h2>
+<a href="#rfc.references.1">5.1.</a> Normative References</h2>
 <table><tbody>
 <tr>
 <td class="reference"><b id="RFC7540">[RFC7540]</b></td>
@@ -528,7 +528,7 @@ Link: &lt;https://example.com/app/script.js&gt;; rel=preload; as=script
 </tr>
 </tbody></table>
 <h2 id="rfc.references.2">
-<a href="#rfc.references.2">6.2.</a> Informative References</h2>
+<a href="#rfc.references.2">5.2.</a> Informative References</h2>
 <table><tbody>
 <tr>
 <td class="reference"><b id="HTTP3">[HTTP3]</b></td>
