@@ -139,14 +139,13 @@ Internet-Draft                PRELOAD Frame                November 2018
 
    After sending ServerHello of the TLS 1.3 handshake, the server sends
    a SETTINGS frame which is the server connection preface as TLS
-   Application Data.  Subsequently, the server identifies the domain
-   from which the client wants to send an HTTP request from the SNI
-   obtained during the handshake.  The server can indicate preload in
-   the PRELOAD frame for resources commonly used in that domain.  The
-   client parses the PRELOAD frame and fetches the resource if it does
-   not have cache for that resource.  The semantics are the same as
-   those defined in Preload[Preload].  If the client does not support a
-   PRELOAD frame, it is simply ignored.
+   Application Data.  Subsequently, The server uses the SNI to identify
+   the domain which the client wants to send an HTTP request.  The
+   server can indicate preload in the PRELOAD frame for resources
+   commonly used in that domain.  The client parses the PRELOAD frame
+   and fetches the resource if it does not have cache for that resource.
+   The semantics are the same as those defined in Preload[Preload].  If
+   the client does not support a PRELOAD frame, it is simply ignored.
 
 2.  PRELOAD Frame Extension
 
@@ -162,6 +161,7 @@ Internet-Draft                PRELOAD Frame                November 2018
    policies such as HSTS more quickly improves security.  But it is not
    associated with any specific request.  It is possible to indicate the
    domain to which the policy applies by specifying the target domain
+
 
 
 
