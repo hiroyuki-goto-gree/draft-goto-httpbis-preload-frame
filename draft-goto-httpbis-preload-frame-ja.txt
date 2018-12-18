@@ -4,7 +4,7 @@
 
 Network Working Group                                            H. Goto
 Internet-Draft                                                 GREE, inc
-Expires: May 19, 2019                                  November 15, 2018
+Expires: June 21, 2019                                 December 18, 2018
 
 
                     The PRELOAD Frame Extension (ja)
@@ -47,15 +47,15 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on May 19, 2019.
+   This Internet-Draft will expire on June 21, 2019.
 
 
 
 
 
-Goto                      Expires May 19, 2019                  [Page 1]
+Goto                      Expires June 21, 2019                 [Page 1]
 
-Internet-Draft                PRELOAD Frame                November 2018
+Internet-Draft                PRELOAD Frame                December 2018
 
 
 Copyright Notice
@@ -109,9 +109,9 @@ Table of Contents
 
 
 
-Goto                      Expires May 19, 2019                  [Page 2]
+Goto                      Expires June 21, 2019                 [Page 2]
 
-Internet-Draft                PRELOAD Frame                November 2018
+Internet-Draft                PRELOAD Frame                December 2018
 
 
    12417;&#12390;HTTP&#12524;&#12473;&#12509;&#12531;&#12473;(103&#12473
@@ -165,9 +165,9 @@ Internet-Draft                PRELOAD Frame                November 2018
 
 
 
-Goto                      Expires May 19, 2019                  [Page 3]
+Goto                      Expires June 21, 2019                 [Page 3]
 
-Internet-Draft                PRELOAD Frame                November 2018
+Internet-Draft                PRELOAD Frame                December 2018
 
 
       Client                                               Server
@@ -221,9 +221,9 @@ Internet-Draft                PRELOAD Frame                November 2018
 
 
 
-Goto                      Expires May 19, 2019                  [Page 4]
+Goto                      Expires June 21, 2019                 [Page 4]
 
-Internet-Draft                PRELOAD Frame                November 2018
+Internet-Draft                PRELOAD Frame                December 2018
 
 
    oad]&#12398;&#20181;&#27096;&#12395;&#22522;&#12389;&#12365;&#12414;&
@@ -277,9 +277,9 @@ Internet-Draft                PRELOAD Frame                November 2018
 
 
 
-Goto                      Expires May 19, 2019                  [Page 5]
+Goto                      Expires June 21, 2019                 [Page 5]
 
-Internet-Draft                PRELOAD Frame                November 2018
+Internet-Draft                PRELOAD Frame                December 2018
 
 
    &#12371;&#12398;&#12501;&#12524;&#12540;&#12512;&#12399;HTTP&#12524;&
@@ -333,9 +333,9 @@ Internet-Draft                PRELOAD Frame                November 2018
 
 
 
-Goto                      Expires May 19, 2019                  [Page 6]
+Goto                      Expires June 21, 2019                 [Page 6]
 
-Internet-Draft                PRELOAD Frame                November 2018
+Internet-Draft                PRELOAD Frame                December 2018
 
 
 2.2.1.  Frame Format
@@ -389,9 +389,9 @@ Internet-Draft                PRELOAD Frame                November 2018
 
 
 
-Goto                      Expires May 19, 2019                  [Page 7]
+Goto                      Expires June 21, 2019                 [Page 7]
 
-Internet-Draft                PRELOAD Frame                November 2018
+Internet-Draft                PRELOAD Frame                December 2018
 
 
    2020;&#12395;&#12371;&#12398;&#12501;&#12524;&#12540;&#12512;&#12434;
@@ -445,9 +445,9 @@ Internet-Draft                PRELOAD Frame                November 2018
 
 
 
-Goto                      Expires May 19, 2019                  [Page 8]
+Goto                      Expires June 21, 2019                 [Page 8]
 
-Internet-Draft                PRELOAD Frame                November 2018
+Internet-Draft                PRELOAD Frame                December 2018
 
 
    12289;&#32771;&#24942;&#12377;&#12409;&#12365;&#12391;&#12377;&#12290
@@ -501,9 +501,9 @@ Internet-Draft                PRELOAD Frame                November 2018
 
 
 
-Goto                      Expires May 19, 2019                  [Page 9]
+Goto                      Expires June 21, 2019                 [Page 9]
 
-Internet-Draft                PRELOAD Frame                November 2018
+Internet-Draft                PRELOAD Frame                December 2018
 
 
    [RFC8288]  Nottingham, M., "Web Linking", RFC 8288,
@@ -557,4 +557,4 @@ Author's Address
 
 
 
-Goto                      Expires May 19, 2019                 [Page 10]
+Goto                      Expires June 21, 2019                [Page 10]

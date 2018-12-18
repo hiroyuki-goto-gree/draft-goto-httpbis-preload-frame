@@ -4,7 +4,7 @@
 
 Network Working Group                                            H. Goto
 Internet-Draft                                                 GREE, inc
-Expires: May 19, 2019                                  November 15, 2018
+Expires: June 21, 2019                                 December 18, 2018
 
 
                       The PRELOAD Frame Extension
@@ -34,7 +34,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on May 19, 2019.
+   This Internet-Draft will expire on June 21, 2019.
 
 Copyright Notice
 
@@ -53,9 +53,9 @@ Copyright Notice
 
 
 
-Goto                      Expires May 19, 2019                  [Page 1]
+Goto                      Expires June 21, 2019                 [Page 1]
 
-Internet-Draft                PRELOAD Frame                November 2018
+Internet-Draft                PRELOAD Frame                December 2018
 
 
 Table of Contents
@@ -109,9 +109,9 @@ Table of Contents
 
 
 
-Goto                      Expires May 19, 2019                  [Page 2]
+Goto                      Expires June 21, 2019                 [Page 2]
 
-Internet-Draft                PRELOAD Frame                November 2018
+Internet-Draft                PRELOAD Frame                December 2018
 
 
       Client                                               Server
@@ -165,9 +165,9 @@ Internet-Draft                PRELOAD Frame                November 2018
 
 
 
-Goto                      Expires May 19, 2019                  [Page 3]
+Goto                      Expires June 21, 2019                 [Page 3]
 
-Internet-Draft                PRELOAD Frame                November 2018
+Internet-Draft                PRELOAD Frame                December 2018
 
 
    (matching with SNI's HostName) in the PRELOAD frame.  Does this
@@ -221,9 +221,9 @@ Internet-Draft                PRELOAD Frame                November 2018
 
 
 
-Goto                      Expires May 19, 2019                  [Page 4]
+Goto                      Expires June 21, 2019                 [Page 4]
 
-Internet-Draft                PRELOAD Frame                November 2018
+Internet-Draft                PRELOAD Frame                December 2018
 
 
    Endpoints that do not support this extension simply ignore reception
@@ -277,9 +277,9 @@ Internet-Draft                PRELOAD Frame                November 2018
 
 
 
-Goto                      Expires May 19, 2019                  [Page 5]
+Goto                      Expires June 21, 2019                 [Page 5]
 
-Internet-Draft                PRELOAD Frame                November 2018
+Internet-Draft                PRELOAD Frame                December 2018
 
 
 4.  IANA Considerations
@@ -333,9 +333,9 @@ Internet-Draft                PRELOAD Frame                November 2018
 
 
 
-Goto                      Expires May 19, 2019                  [Page 6]
+Goto                      Expires June 21, 2019                 [Page 6]
 
-Internet-Draft                PRELOAD Frame                November 2018
+Internet-Draft                PRELOAD Frame                December 2018
 
 
    [TLS-ESNI]
@@ -389,4 +389,4 @@ Author's Address
 
 
 
-Goto                      Expires May 19, 2019                  [Page 7]
+Goto                      Expires June 21, 2019                 [Page 7]
