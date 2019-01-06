@@ -131,6 +131,7 @@ Internet-Draft                PRELOAD Frame                December 2018
       [Application Data]      -------->
         -  Connection Preface
         -  SETTINGS
+        -  SETTINGS(ACK)
         -  HEADERS
 
                  '-'  Indicates HTTP/2 messages in Application Data.
@@ -161,7 +162,6 @@ Internet-Draft                PRELOAD Frame                December 2018
    policies such as HSTS more quickly improves security.  But it is not
    associated with any specific request.  It is possible to indicate the
    domain to which the policy applies by specifying the target domain
-
 
 
 
