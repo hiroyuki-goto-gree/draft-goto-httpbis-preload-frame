@@ -113,7 +113,7 @@ A server can send application data before a client sends data if they are using 
 
 # Introduction        {#introduction}
 
-A server can send application data before a client sends application data if they are using HTTP/2{{RFC7540}} with TLS1.3{{RFC8446}} or HTTP/3{{HTTP3}}. But in HTTP/2 {{RFC7540}} the server only sends a SETTINGS frame as the server connection preface.　After that, it can send an HTTP response (including a 103 status code {{RFC8297}}) or server push only after receiving a request from the client.
+A server can send application data before a client sends application data if they are using HTTP/2{{RFC7540}} with TLS1.3{{RFC8446}} or HTTP/3{{HTTP3}}. But in HTTP/2 {{RFC7540}} the server only sends a SETTINGS frame as the server connection preface. After that, it can send an HTTP response (including a 103 status code {{RFC8297}}) or server push only after receiving a request from the client.
 
 Indicating loading of necessary resources without waiting for the first request from the client may improve page loading performance. In order to make effective use of opportunities for the server to transmit application data for the first time, this document defines a PRELOAD frame; a new extension frame which enables the server to notify preload {{Preload}} information from the server.
 
@@ -151,7 +151,7 @@ After sending ServerHello of the TLS 1.3 handshake, the server sends a SETTINGS 
 # PRELOAD Frame Extension        {#preload-extension}
 Preload Frame Extension does not define a new format to convey preload information. It uses the already defined Link HTTP header. However, it is not an HTTP response carried in this frame, and it is not associated with an HTTP request to an authority. Therefore, the server MUST store only information about Preload{{Preload}} in this frame to avoid confusion in the implementation.
 
-Open Question: In the above, the PRELOAD frame is allowed to carry only information about Preload{{Preload}}. However, adapting security policies such as HSTS more quickly improves security. But it is not associated with any specific request. It is possible to indicate the domain to which the policy applies by specifying the target domain (matching with SNI's HostName) in the PRELOAD frame. Does this introduce any security issues?
+Open Question: In the above, the PRELOAD frame is allowed to carry only information about Preload{{Preload}}. However, adapting security policies such as HSTS more quickly improves security. But it is not associated with any specific request. It is possible to indicate the domain to which the policy applies by specifying the target domain (matching with SNI's HostName) in the PRELOAD frame. Does this introduce any semantics or security issues?
 
 Since this frame does not represent an HTTP response, it does not have a context for header compression, is not possible to use a dynamic table for encoding or decoding HTTP responses. Since the Preload{{Preload}} frame may be ignored by the received endpoint the dynamic header table MUST NOT be updated.
 
@@ -200,7 +200,7 @@ The server can send a PRELOAD frame before receiving SETTINGS_MAX_HEADER_LIST_SI
 ## HTTP/3        {#h3}
 The PRELOAD frames (type=TBD) can be used with HTTP/3. The format is the same as described for {{h2-frame}}, but the payload Header Block uses QPACK {{QPACK}} instead of HPACK. This frame MUST NOT update the dynamic header table.
 
-The PRELOAD frame can only be sent from the server on the control stream. A server that has received this frame or received on a different stream MUST be treated as a connection error.
+The PRELOAD frame can only be sent from the server on the control stream. This frame MUST be ignored if the server receives this frame or if the client receives this frame with a different streams. If a client receives a PRELOAD frame that is too long, it SHOULD ignore that.
 
 ## Padding        {#padding}
 If the length of the PRELOAD frame changes depending on the SNI used, observation the first application data to make the hostname inferable on the path. This should be considered when encrypting SNI with ENSI{{TLS-ESNI}}.
