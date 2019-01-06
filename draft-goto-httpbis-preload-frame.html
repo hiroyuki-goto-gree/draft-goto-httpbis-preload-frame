@@ -390,7 +390,7 @@ ul.toc li {
   <h1 id="rfc.section.1">
 <a href="#rfc.section.1">1.</a> <a href="#introduction" id="introduction">Introduction</a>
 </h1>
-<p id="rfc.section.1.p.1">A server can send application data before a client sends application data if they are using HTTP/2<a href="#RFC7540" class="xref">[RFC7540]</a> with TLS1.3<a href="#RFC8446" class="xref">[RFC8446]</a> or HTTP/3<a href="#HTTP3" class="xref">[HTTP3]</a>. But in HTTP/2 <a href="#RFC7540" class="xref">[RFC7540]</a> the server only sends a SETTINGS frame as the server connection preface.&#12288;After that, it can send an HTTP response (including a 103 status code <a href="#RFC8297" class="xref">[RFC8297]</a>) or server push only after receiving a request from the client.</p>
+<p id="rfc.section.1.p.1">A server can send application data before a client sends application data if they are using HTTP/2<a href="#RFC7540" class="xref">[RFC7540]</a> with TLS1.3<a href="#RFC8446" class="xref">[RFC8446]</a> or HTTP/3<a href="#HTTP3" class="xref">[HTTP3]</a>. But in HTTP/2 <a href="#RFC7540" class="xref">[RFC7540]</a> the server only sends a SETTINGS frame as the server connection preface. After that, it can send an HTTP response (including a 103 status code <a href="#RFC8297" class="xref">[RFC8297]</a>) or server push only after receiving a request from the client.</p>
 <p id="rfc.section.1.p.2">Indicating loading of necessary resources without waiting for the first request from the client may improve page loading performance. In order to make effective use of opportunities for the server to transmit application data for the first time, this document defines a PRELOAD frame; a new extension frame which enables the server to notify preload <a href="#Preload" class="xref">[Preload]</a> information from the server.</p>
 <h2 id="rfc.section.1.1">
 <a href="#rfc.section.1.1">1.1.</a> <a href="#preload-frame-overview" id="preload-frame-overview">PRELOAD Frame Overview</a>
@@ -427,7 +427,7 @@ ul.toc li {
 <a href="#rfc.section.2">2.</a> <a href="#preload-extension" id="preload-extension">PRELOAD Frame Extension</a>
 </h1>
 <p id="rfc.section.2.p.1">Preload Frame Extension does not define a new format to convey preload information. It uses the already defined Link HTTP header. However, it is not an HTTP response carried in this frame, and it is not associated with an HTTP request to an authority. Therefore, the server MUST store only information about Preload<a href="#Preload" class="xref">[Preload]</a> in this frame to avoid confusion in the implementation.</p>
-<p id="rfc.section.2.p.2">Open Question: In the above, the PRELOAD frame is allowed to carry only information about Preload<a href="#Preload" class="xref">[Preload]</a>. However, adapting security policies such as HSTS more quickly improves security. But it is not associated with any specific request. It is possible to indicate the domain to which the policy applies by specifying the target domain (matching with SNI&#8217;s HostName) in the PRELOAD frame. Does this introduce any security issues?</p>
+<p id="rfc.section.2.p.2">Open Question: In the above, the PRELOAD frame is allowed to carry only information about Preload<a href="#Preload" class="xref">[Preload]</a>. However, adapting security policies such as HSTS more quickly improves security. But it is not associated with any specific request. It is possible to indicate the domain to which the policy applies by specifying the target domain (matching with SNI&#8217;s HostName) in the PRELOAD frame. Does this introduce any semantics or security issues?</p>
 <p id="rfc.section.2.p.3">Since this frame does not represent an HTTP response, it does not have a context for header compression, is not possible to use a dynamic table for encoding or decoding HTTP responses. Since the Preload<a href="#Preload" class="xref">[Preload]</a> frame may be ignored by the received endpoint the dynamic header table MUST NOT be updated.</p>
 <p id="rfc.section.2.p.4">Open Question: Would it benefit if PRELOAD frames could use separate dynamic header tables?</p>
 <p id="rfc.section.2.p.5">This document defines extensions for HTTP/2 and HTTP/3 separately.</p>
@@ -472,7 +472,7 @@ Link: &lt;https://example.com/app/script.js&gt;; rel=preload; as=script
 <a href="#rfc.section.2.3">2.3.</a> <a href="#h3" id="h3">HTTP/3</a>
 </h2>
 <p id="rfc.section.2.3.p.1">The PRELOAD frames (type=TBD) can be used with HTTP/3. The format is the same as described for <a href="#h2-frame" class="xref">Section 2.2.1</a>, but the payload Header Block uses QPACK <a href="#QPACK" class="xref">[QPACK]</a> instead of HPACK. This frame MUST NOT update the dynamic header table.</p>
-<p id="rfc.section.2.3.p.2">The PRELOAD frame can only be sent from the server on the control stream. A server that has received this frame or received on a different stream MUST be treated as a connection error.</p>
+<p id="rfc.section.2.3.p.2">The PRELOAD frame can only be sent from the server on the control stream. This frame MUST be ignored if the server receives this frame or if the client receives this frame with a different streams. If a client receives a PRELOAD frame that is too long, it SHOULD ignore that.</p>
 <h2 id="rfc.section.2.4">
 <a href="#rfc.section.2.4">2.4.</a> <a href="#padding" id="padding">Padding</a>
 </h2>
