@@ -140,6 +140,7 @@ The flow is as follows:
    [Application Data]      -------->
      -  Connection Preface
      -  SETTINGS
+     -  SETTINGS(ACK)
      -  HEADERS
 
               '-'  Indicates HTTP/2 messages in Application Data.

@@ -141,6 +141,7 @@ PRELOADフレームはTLS1.3ハンドシェイクの後にサーバが最初に�
    [Application Data]      -------->
      -  Connection Preface
      -  SETTINGS
+     -  SETTINGS(ACK)
      -  HEADERS
 
               '-'  Indicates HTTP/2 messages in Appliration Data.
